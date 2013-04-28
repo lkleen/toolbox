@@ -9,9 +9,9 @@ import org.larsworks.toolbox.database.jdbc.JdbcConnectionParameters;
  * @author lkleen
  * @version 0.0.1
  */
-public class MysqlJdbcConnectionParameters extends JdbcConnectionParameters {
+public class MySqlJdbcConnectionParameters extends org.larsworks.toolbox.database.jdbc.JdbcConnectionParameters {
 
-    public MysqlJdbcConnectionParameters() {
+    public MySqlJdbcConnectionParameters() {
         super("mysql");
     }
 

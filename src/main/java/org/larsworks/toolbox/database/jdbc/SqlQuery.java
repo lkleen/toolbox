@@ -1,4 +1,4 @@
-package org.larsworks.toolbox.database.jdbc.mysq;
+package org.larsworks.toolbox.database.jdbc;
 
 import org.larsworks.toolbox.database.jdbc.Query;
 
@@ -14,11 +14,11 @@ import java.sql.SQLException;
  * @author lkleen
  * @version version?
  */
-public class MySqlQuery implements Query {
+public class SqlQuery implements Query {
 
     private final Connection connection;
 
-    public MySqlQuery(Connection connection) {
+    public SqlQuery(Connection connection) {
         this.connection = connection;
     }
 

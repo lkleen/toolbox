@@ -1,7 +1,7 @@
-package org.larsworks.toolbox.database.jdbc.mysq;
+package org.larsworks.toolbox.database.jdbc;
 
 import lombok.extern.slf4j.Slf4j;
-import org.larsworks.toolbox.database.jdbc.Query;
+import org.larsworks.toolbox.database.jdbc.mysq.MySqlJdbcConnectionParameters;
 
 import java.sql.*;
 
@@ -10,21 +10,23 @@ import java.sql.*;
  * @version 0.0.1
  */
 @Slf4j
-public class SimpleConnectionTest {
+public class ConnectionTest {
 
-    private final MysqlJdbcConnectionParameters parameters;
+    private final JdbcConnectionParameters parameters;
 
-    public SimpleConnectionTest(MysqlJdbcConnectionParameters parameters) {
+    private final Driver driver;
+
+    public ConnectionTest(JdbcConnectionParameters parameters, Driver driver) {
         this.parameters = parameters;
+        this.driver = driver;
     }
 
     public void test() {
         Connection conn = null;
         try {
-            Driver driver = new com.mysql.jdbc.Driver();
             DriverManager.registerDriver(driver);
             conn = DriverManager.getConnection(parameters.urlBuilder().build());
-            Query query = new MySqlQuery(conn);
+            Query query = new SqlQuery(conn);
 
             log.debug("databases:");
             outputResultSet(query.execute("show databases;"));

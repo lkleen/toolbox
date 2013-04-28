@@ -20,6 +20,10 @@ public abstract class JdbcConnectionParameters {
 
     String properties;
 
+    protected JdbcConnectionParameters(String type) {
+        this.type = type;
+    }
+
     public JdbcUrlBuilder urlBuilder() {
         return new JdbcUrlBuilder(this);
     }
