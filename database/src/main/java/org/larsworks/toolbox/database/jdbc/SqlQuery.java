@@ -1,7 +1,5 @@
 package org.larsworks.toolbox.database.jdbc;
 
-import org.larsworks.toolbox.database.jdbc.Query;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

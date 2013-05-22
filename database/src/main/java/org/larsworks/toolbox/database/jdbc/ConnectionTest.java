@@ -1,7 +1,6 @@
 package org.larsworks.toolbox.database.jdbc;
 
 import lombok.extern.slf4j.Slf4j;
-import org.larsworks.toolbox.database.jdbc.mysq.MySqlJdbcConnectionParameters;
 
 import java.sql.*;
 

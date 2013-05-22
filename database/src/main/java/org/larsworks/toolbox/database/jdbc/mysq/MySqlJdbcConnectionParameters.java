@@ -1,7 +1,5 @@
 package org.larsworks.toolbox.database.jdbc.mysq;
 
-import org.larsworks.toolbox.database.jdbc.JdbcConnectionParameters;
-
 /**
  * Date: 2/28/13
  * Time: 11:55 AM
