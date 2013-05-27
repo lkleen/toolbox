@@ -21,7 +21,7 @@ public class Main {
 
     public static void main(String... args) throws Exception {
         final String jmxRmiStr =
-                "service:jmx:rmi://10.189.173.106/jndi/rmi://10.189.173.106:1099/jmxrmi";
+                "service:jmx:rmi://10.189.173.106/jndi/rmi://10.189.173.106:10991/jmxrmi";
 
         new JmxConnector(jmxRmiStr).connect();
     }
